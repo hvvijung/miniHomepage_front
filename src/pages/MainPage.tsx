@@ -2,7 +2,7 @@ import styled from "styled-components";
 import profile from "../assets/profile-1.jpg";
 
 const Container = styled.div`
-  background: #66ff00;
+  background: #4cec72;
   padding: 20px;
   display: flex;
   justify-content: center;
@@ -18,7 +18,6 @@ const Container = styled.div`
     left: 0;
     width: 100%;
     height: 40px;
-    background: #66ff00;
     font-size: 20px;
     text-align: center;
     font-weight: bold;
@@ -39,9 +38,11 @@ const Container = styled.div`
 `;
 
 const Notebook = styled.div`
-  background: linear-gradient(to right, #d0f0ff, #c7ffb9);
-  width: 70%;
-  max-width: 800px;
+  background: linear-gradient(to left, #d0f0ff, #b6ffa4);
+  width: 100%;
+  max-width: 90%;
+  height: 80%;
+  border: 2px solid #ffffff;
   border-radius: 10px;
   box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
   padding: 20px;
@@ -53,8 +54,8 @@ const Notebook = styled.div`
 const Title = styled.h2`
   color: #337ab7;
   text-align: center;
-  font-size: 24px;
-  margin-bottom: 10px;
+  font-size: 40px;
+  font-family: "Courier", cursive, sans-serif;
 `;
 
 const Content = styled.div`
