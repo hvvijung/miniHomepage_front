@@ -37,7 +37,7 @@ const Container = styled.div`
   }
 `;
 
-const Notebook = styled.div`
+const Board = styled.div`
   background: linear-gradient(to left, #d0f0ff, #b6ffa4);
   width: 100%;
   max-width: 90%;
@@ -51,32 +51,29 @@ const Notebook = styled.div`
   align-items: center;
 `;
 
+const Notebooks = styled.div`
+  display: flex;
+  justify-content: space-around;
+  width: 100%;
+  gap: 20px;
+`;
+
+const Notebook = styled.div`
+  background-color: white;
+  width: 100%;
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border-radius: 20px;
+  min-height: 200px;
+`;
+
 const Title = styled.h2`
   color: #337ab7;
   text-align: center;
   font-size: 40px;
   font-family: "Courier", cursive, sans-serif;
-`;
-
-const Content = styled.div`
-  display: flex;
-  width: 100%;
-`;
-
-const LeftPanel = styled.div`
-  flex: 1;
-  padding: 10px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-`;
-
-const RightPanel = styled.div`
-  flex: 2;
-  background: white;
-  border-radius: 10px;
-  padding: 20px;
-  min-height: 200px;
 `;
 
 const Image = styled.img`
@@ -96,17 +93,17 @@ const Text = styled.p`
 const App: React.FC = () => {
   return (
     <Container>
-      <Notebook>
+      <Board>
         <Title>JAEHEE</Title>
-        <Content>
-          <LeftPanel>
+        <Notebooks>
+          <Notebook>
             <Image src={profile} alt="profile" />
             <Text>NCT WISH 재희</Text>
             <Text>最高のボーカルになりたい</Text>
-          </LeftPanel>
-          <RightPanel></RightPanel>
-        </Content>
-      </Notebook>
+          </Notebook>
+          <Notebook></Notebook>
+        </Notebooks>
+      </Board>
     </Container>
   );
 };
