@@ -63,10 +63,11 @@ const Notebook = styled.div`
   width: 100%;
   padding: 10px;
   display: flex;
-  flex-direction: column;
+  flex-direction: column
   align-items: center;
   border-radius: 20px;
   min-height: 200px;
+  border: 2px solid #c7c7c7;
 `;
 
 const Title = styled.h2`
