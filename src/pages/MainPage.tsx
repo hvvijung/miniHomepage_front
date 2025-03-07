@@ -3,45 +3,19 @@ import profile from "../assets/profile-1.jpg";
 
 const Container = styled.div`
   background: #4cec72;
-  padding: 20px;
+  margin: 0;
+  padding: 0;
   display: flex;
   justify-content: center;
   align-items: center;
   height: 100vh;
   position: relative;
   font-family: Arial, sans-serif;
-  overflow: hidden;
-
-  &::before {
-    content: "I ❤️ JH ";
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 40px;
-    font-size: 20px;
-    text-align: center;
-    font-weight: bold;
-    color: black;
-    white-space: nowrap;
-    overflow: hidden;
-    animation: marquee 10s linear infinite;
-  }
-
-  @keyframes marquee {
-    from {
-      transform: translateX(0);
-    }
-    to {
-      transform: translateX(-100%);
-    }
-  }
 `;
 
 const Board = styled.div`
   background: linear-gradient(to left, #d0f0ff, #b6ffa4);
-  width: 100%;
-  max-width: 90%;
+  width: 80%;
   height: 80%;
   border: 2px solid #ffffff;
   border-radius: 10px;
@@ -102,7 +76,7 @@ const Text = styled.p`
 
 const SpiralBinding = styled.div`
   position: absolute;
-  left: 33%;
+  left: 32%;
   height: 65%;
   width: 10px;
   display: flex;
@@ -120,12 +94,29 @@ const SpiralRing = styled.div`
   border-radius: 20px;
 `;
 
+const PageButton = styled.button`
+  background: white;
+  color: #007bff;
+  border: 2px solid #c7c7c7;
+  border-left: none;
+  border-radius: 10px;
+  padding: 10px 20px;
+  font-size: 20px;
+  cursor: pointer;
+  margin-top: 20px;
+  position: absolute;
+  right: 10px;
+`;
+
 const App: React.FC = () => {
   return (
     <Container>
       <Board>
         <Title>JH</Title>
         <Notebooks>
+          <PageButton>홈</PageButton>
+          <PageButton>프로필</PageButton>
+          <PageButton>다이어리</PageButton>
           <Notebook boxWidth="40%">
             <Image src={profile} alt="profile" />
             <Text>JH</Text>
