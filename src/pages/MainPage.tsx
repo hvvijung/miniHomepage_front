@@ -94,29 +94,38 @@ const SpiralRing = styled.div`
   border-radius: 20px;
 `;
 
-const PageButton = styled.button`
-  background: white;
-  color: #007bff;
-  border: 2px solid #c7c7c7;
-  border-left: none;
-  border-radius: 10px;
-  padding: 10px 20px;
-  font-size: 20px;
-  cursor: pointer;
-  margin-top: 20px;
+const IndexTabs = styled.div`
   position: absolute;
-  right: 10px;
+  top: 25%;
+  right: -30px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
 `;
 
+const IndexTab = styled.button`
+  background: ${(props) => props.color || "#ccc"};
+  border: none;
+  padding: 10px;
+  width: 80px;
+  cursor: pointer;
+  font-size: 14px;
+  color: white;
+  font-weight: bold;
+  text-align: center;
+  border-radius: 5px;
+  transition: 0.3s;
+
+  &:hover {
+    opacity: 0.8;
+  }
+`;
 const App: React.FC = () => {
   return (
     <Container>
       <Board>
         <Title>JH</Title>
         <Notebooks>
-          <PageButton>홈</PageButton>
-          <PageButton>프로필</PageButton>
-          <PageButton>다이어리</PageButton>
           <Notebook boxWidth="40%">
             <Image src={profile} alt="profile" />
             <Text>JH</Text>
@@ -128,6 +137,11 @@ const App: React.FC = () => {
             ))}
           </SpiralBinding>
           <Notebook></Notebook>
+          <IndexTabs>
+            <IndexTab color="white">Home</IndexTab>
+            <IndexTab color="#007bff">About</IndexTab>
+            <IndexTab color="#007bff">Contact</IndexTab>
+          </IndexTabs>
         </Notebooks>
       </Board>
     </Container>
