@@ -97,7 +97,7 @@ const SpiralRing = styled.div`
 const IndexTabs = styled.div`
   position: absolute;
   top: 25%;
-  right: -30px;
+  right: 1%;
   display: flex;
   flex-direction: column;
   gap: 10px;
@@ -105,12 +105,12 @@ const IndexTabs = styled.div`
 
 const IndexTab = styled.button`
   background: ${(props) => props.color || "#ccc"};
-  border: none;
+  border: 2px solid #c7c7c7;
   padding: 10px;
   width: 80px;
   cursor: pointer;
   font-size: 14px;
-  color: white;
+  color: #007bff;
   font-weight: bold;
   text-align: center;
   border-radius: 5px;
@@ -139,8 +139,8 @@ const App: React.FC = () => {
           <Notebook></Notebook>
           <IndexTabs>
             <IndexTab color="white">Home</IndexTab>
-            <IndexTab color="#007bff">About</IndexTab>
-            <IndexTab color="#007bff">Contact</IndexTab>
+            <IndexTab color="#13d621">About</IndexTab>
+            <IndexTab color="#13d621">Contact</IndexTab>
           </IndexTabs>
         </Notebooks>
       </Board>
