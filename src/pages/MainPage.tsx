@@ -1,5 +1,10 @@
 import styled from "styled-components";
 import profile from "../assets/profile-1.jpg";
+import { ReactNode } from "react";
+
+interface LayoutProps {
+  children: ReactNode;
+}
 
 const Container = styled.div`
   background: #4cec72;
@@ -95,12 +100,10 @@ const SpiralRing = styled.div`
 `;
 
 const IndexTabs = styled.div`
-  position: absolute;
-  top: 25%;
-  right: 1%;
   display: flex;
   flex-direction: column;
-  gap: 10px;
+  gap: 5px;
+  margin-left: -35px;
 `;
 
 const IndexTab = styled.button`
@@ -120,7 +123,8 @@ const IndexTab = styled.button`
     opacity: 0.8;
   }
 `;
-const App: React.FC = () => {
+
+const Layout: React.FC<LayoutProps> = ({ children }) => {
   return (
     <Container>
       <Board>
@@ -136,11 +140,14 @@ const App: React.FC = () => {
               <SpiralRing key={index} />
             ))}
           </SpiralBinding>
-          <Notebook></Notebook>
+          <Notebook>{children}</Notebook>
           <IndexTabs>
             <IndexTab color="white">Home</IndexTab>
-            <IndexTab color="#13d621">About</IndexTab>
-            <IndexTab color="#13d621">Contact</IndexTab>
+            <IndexTab color="#13d621">Profile</IndexTab>
+            <IndexTab color="#13d621">Diary</IndexTab>
+            <IndexTab color="#13d621">Gallery</IndexTab>
+            <IndexTab color="#13d621">Video</IndexTab>
+            <IndexTab color="#13d621">Visitors</IndexTab>
           </IndexTabs>
         </Notebooks>
       </Board>
@@ -148,4 +155,4 @@ const App: React.FC = () => {
   );
 };
 
-export default App;
+export default Layout;

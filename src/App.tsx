@@ -1,14 +1,19 @@
 import React from "react";
-import "./App.css";
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import HomePage from "./pages/HomePage";
+import ProfilePage from "./pages/ProfilePage";
+import VideoPage from "./pages/VideoPage";
 
-import MainPage from "./pages/MainPage";
-
-function App() {
+const App: React.FC = () => {
   return (
-    <div className="App">
-      <MainPage></MainPage>
-    </div>
+    <Router>
+      <Routes>
+        <Route path="/" element={<HomePage />} />
+        <Route path="/about" element={<ProfilePage />} />
+        <Route path="/video" element={<VideoPage />} />
+      </Routes>
+    </Router>
   );
-}
+};
 
 export default App;
