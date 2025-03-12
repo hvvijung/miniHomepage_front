@@ -73,7 +73,7 @@ const Title = styled.h2`
   color: #337ab7;
   text-align: center;
   font-size: 40px;
-  font-family: "Courier", cursive, sans-serif;
+  font-family: "Cafe24Ohsquareair", "Courier", cursive, sans-serif;
   margin: 0 0 20px 0;
 `;
 
