@@ -89,7 +89,7 @@ const Text = styled.p`
   color: #007bff;
   text-align: center;
   font-weight: bold;
-  font-family: "Courier", cursive, sans-serif;
+  font-family: "Cafe24Ohsquareair", "Courier", cursive, sans-serif;
 `;
 
 const SpiralBinding = styled.div`
