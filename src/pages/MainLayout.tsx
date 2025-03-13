@@ -42,16 +42,18 @@ const Board = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
+  overflow: hidden;
 `;
 
 const Notebooks = styled.div`
   display: flex;
   width: 100%;
+  height: calc(100% - 100px);
   justify-content: space-around;
-  width: 100%;
-  height: 100%;
   gap: 20px;
+  position: relative;
 `;
+
 interface NotebookProps {
   boxWidth?: string;
 }
@@ -64,9 +66,28 @@ const Notebook = styled.div<NotebookProps>`
   flex-direction: column;
   align-items: center;
   border-radius: 20px;
-  min-height: 200px;
+  height: 100%;
+  overflow-y: auto;
   border: 2px solid #c7c7c7;
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.2);
+
+  &::-webkit-scrollbar {
+    width: 8px;
+  }
+
+  &::-webkit-scrollbar-track {
+    background: #f1f1f1;
+    border-radius: 4px;
+  }
+
+  &::-webkit-scrollbar-thumb {
+    background: #888;
+    border-radius: 4px;
+  }
+
+  &::-webkit-scrollbar-thumb:hover {
+    background: #555;
+  }
 `;
 
 const Title = styled.h2`
@@ -92,8 +113,8 @@ const Text = styled.p`
 
 const SpiralBinding = styled.div`
   position: absolute;
-  left: 32%;
-  height: 65%;
+  left: 27%;
+  height: 105%;
   width: 10px;
   display: flex;
   flex-direction: column;
