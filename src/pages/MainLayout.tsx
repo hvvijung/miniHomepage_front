@@ -1,7 +1,7 @@
 import styled, { createGlobalStyle } from "styled-components";
 import profile from "../assets/profile-1.jpg";
 import { ReactNode } from "react";
-import { Link, NavLink } from "react-router-dom";
+import { NavLink } from "react-router-dom";
 
 interface LayoutProps {
   children: ReactNode;
@@ -73,7 +73,6 @@ const Title = styled.h2`
   color: #337ab7;
   text-align: center;
   font-size: 40px;
-  font-family: "Cafe24Ohsquareair", "Courier", cursive, sans-serif;
   margin: 0 0 20px 0;
 `;
 
@@ -89,7 +88,6 @@ const Text = styled.p`
   color: #007bff;
   text-align: center;
   font-weight: bold;
-  font-family: "Cafe24Ohsquareair", "Courier", cursive, sans-serif;
 `;
 
 const SpiralBinding = styled.div`
