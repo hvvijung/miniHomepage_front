@@ -11,7 +11,7 @@ const ProfilePage: React.FC = () => {
     <Layout>
       <ProfileContent>
         <h2>Profile Page</h2>
-        <p>여기는 프로필 페이지입니다.</p>
+        <p>프로필을 적어주세여</p>
       </ProfileContent>
     </Layout>
   );
