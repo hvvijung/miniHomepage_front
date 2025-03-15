@@ -10,8 +10,8 @@ const HomePage: React.FC = () => {
   return (
     <Layout>
       <HomeContent>
-        <h2>Welcome to My Homepage!</h2>
-        <p>이곳은 제 미니홈페이지의 메인 공간입니다.</p>
+        <h2>안뇽하세요</h2>
+        <p>시즈니 안녕~ 째히에여</p>
       </HomeContent>
     </Layout>
   );
